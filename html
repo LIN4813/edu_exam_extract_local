@@ -3,115 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wangye Question Bank - 编程学习题库</title>
+    <title>酱汁 Question Site - 优学院&学习通刷题资源站</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "Microsoft YaHei", sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        :root {
+            --primary: #4285f4;
+            --secondary: #f8f9fa;
+            --text: #333;
+            --light-text: #666;
+            --border: #e0e0e0;
         }
         body {
+            background-color: var(--secondary);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        .container {
             max-width: 1000px;
-            margin: 2rem auto;
-            padding: 0 2rem;
-            line-height: 1.8;
-            color: #333;
+            margin: 0 auto;
+            padding: 2rem 1rem;
         }
         header {
             text-align: center;
+            margin-bottom: 2.5rem;
             padding-bottom: 1.5rem;
-            border-bottom: 2px solid #007acc;
-            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
         }
-        h1 {
-            color: #007acc;
+        header h1 {
+            color: var(--primary);
+            font-size: 2.2rem;
             margin-bottom: 0.5rem;
         }
-        .topic-tags {
-            margin-top: 1rem;
-            color: #666;
+        header p {
+            color: var(--light-text);
+            font-size: 1.1rem;
         }
-        .topic-tags span {
-            background-color: #e6f7ff;
-            padding: 0.3rem 0.8rem;
+        .tag-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.8rem;
+            margin: 1.5rem 0;
+        }
+        .tag {
+            background-color: white;
+            padding: 0.4rem 1rem;
             border-radius: 20px;
-            margin: 0 0.5rem;
+            border: 1px solid var(--primary);
+            color: var(--primary);
             font-size: 0.9rem;
         }
         section {
-            margin-bottom: 2rem;
-        }
-        h2 {
-            color: #2f5496;
-            margin-bottom: 1rem;
-            border-left: 4px solid #007acc;
-            padding-left: 0.8rem;
-        }
-        ul {
-            padding-left: 2rem;
-        }
-        .usage, .contribute {
-            background-color: #f5f9fa;
-            padding: 1.5rem;
+            background-color: white;
             border-radius: 8px;
+            padding: 1.8rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        section h2 {
+            color: var(--primary);
+            margin-bottom: 1.2rem;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        section h2 i {
+            font-size: 1.2rem;
+        }
+        .feature-list {
+            list-style: none;
+        }
+        .feature-list li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        。feature-list li::before {
+            content: "✓";
+            color: var(--primary);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        。platform-link {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        .platform-btn {
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.3s;
+        }
+        .platform-btn:hover {
+            background-color: #3367d6;
+        }
+        。code-block {
+            background-color: var(--secondary);
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 1rem 0;
+            font-family: 'Consolas', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
         }
         footer {
             text-align: center;
-            color: #666;
+            color: var(--light-text);
+            margin-top: 3rem;
             padding-top: 1rem;
-            border-top: 1px solid #eee;
+            border-top: 1px solid var(--border);
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Wangye Question Bank</h1>
-        <p>基于王业学习库的编程学习刷题资源库</p>
-        <div class="topic-tags">
-            <span>python</span>
-            <span>programming</span>
-            <span>questions</span>
-            <span>study</span>
-            <span>exam</span>
-            <span>exercises</span>
-        </div>
-    </header>
+    <div class="container">
+        <header>
+            <h1>Jiangzhi Question Site</h1>
+            <p>适配优学院 & 学习通的编程刷题资源平台</p>
+            <div class="tag-group">
+                <span class="tag">Python 刷题</span>
+                <span class="tag">优学院同步</span>
+                <span class="tag">学习通配套</span>
+                <span class="tag">开源协作</span>
+            </div>
+        </header>
 
-    <section>
-        <h2>项目介绍</h2>
-        <p>本仓库精选自<strong>王业学习库</strong>的优质编程题目，聚焦 Python 语法、算法实践、计算机学科核心知识点，适用于计算机专业学生、编程入门学习者及从业者查漏补缺、巩固技能。</p>
-        <p>所有题目分类整理，部分附带解题思路与代码示例，旨在打造一个高效、实用的开源刷题平台。</p>
-    </section>
+        <section>
+            <h2>📚 项目介绍</h2>
+            <p>本平台基于 <strong>降值学习库</strong> 打造，专为优学院、学习通用户提供编程刷题资源。聚焦 Python 语法、算法与数据结构、计算机学科核心考点，题目分类清晰，配套详细题解，助力学习者对接课程要求，高效提升编程能力。</p>
+        </section>
 
-    <section class="usage">
-        <h2>使用指南</h2>
-        <ul>
-            <li>克隆仓库：<code>git clone https://github.com/你的用户名/wangye-question-bank.git</code></li>
-            <li>进入仓库目录，查看 <code>questions</code> 文件夹，按知识点分类获取题目</li>
-            <li>在 <code>solutions</code> 文件夹中可参考解题思路与代码实现</li>
-            <li>本地运行代码时，确保已配置 Python 环境（推荐 Python 3.8+ 版本）</li>
-        </ul>
-    </section>
+        <section>
+            <h2>✨ 核心特色</h2>
+            <ul class="feature-list">
+                <li><strong>双平台适配</strong>：题目覆盖优学院、学习通常见编程作业与考试题型，无缝对接课程学习</li>
+                <li><strong>分层题库设计</strong>：基础入门/进阶提升/真题演练三级分类，满足不同阶段学习需求</li>
+                <li><strong>思路导向题解</strong>：每道题提供多解法代码+逻辑分析+复杂度标注，拒绝机械刷题</li>
+                <li><strong>轻量化无依赖</strong>：克隆仓库即可本地使用，支持 Windows/macOS/Linux 全平台</li>
+            </ul>
+        </section>
 
-    <section class="contribute">
-        <h2>贡献指南</h2>
-        <p>欢迎所有学习者参与开源协作，共同完善题库：</p>
-        <ul>
-            <li>提交新题目：按仓库现有分类格式整理题目，发起 Pull Request</li>
-            <li>补充题解：为无解答的题目编写思路分析与代码示例</li>
-            <li>优化内容：修正题目描述错误、完善代码注释</li>
-        </ul>
-    </section>
+        <section>
+            <h2>🔗 平台对接</h2>
+            <p>可将题库内容与优学院、学习通课程绑定，实现：</p>
+            <ul class="feature-list">
+                <li>同步课程知识点，针对性刷题巩固</li>
+                <li>导出题目及答案，辅助完成平台作业</li>
+                <li>上传优质题解，参与课程资源共建</li>
+            </ul>
+            <div class="platform-link">
+                <a href="#" class="platform-btn">优学院资源入口</a>
+                <a href="#" class="platform-btn">学习通配套题库</a>
+            </div>
+        </section>
 
-    <section>
-        <h2>项目主题</h2>
-        <p>核心定位：<strong>编程学习 + 题库练习 + 开源协作</strong></p>
-        <p>覆盖方向：Python 基础语法、算法与数据结构、计算机专业核心考点</p>
-    </section>
+        <section>
+            <h2>🛠️ 快速使用</h2>
+            <p>1. 克隆仓库到本地</p>
+            <div class="code-block">
+git clone https://github.com/your-username/jiangzhi-question-site.git<br>
+cd jiangzhi-question-site
+            </div>
+            <p>2. 进入 <code>questions</code> 文件夹，选择对应模块刷题</p>
+            <p>3. 参考 <code>solutions</code> 文件夹的题解，优化解题思路</p>
+        </section>
 
-    <footer>
-        <p>© Wangye Question Bank | 开源刷题，助力编程学习</p>
-    </footer>
+        <footer>
+            <p>© 2025 Jiangzhi Question Site | 开源刷题，助力双平台课程学习</p>
+        </footer>
+    </div>
 </body>
 </html>
