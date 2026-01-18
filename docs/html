@@ -1,1 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>酱汁 Question Site - 优学院&学习通刷题资源站</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        :root {
+            --primary: #4285f4;
+            --secondary: #f8f9fa;
+            --text: #333;
+            --light-text: #666;
+            --border: #e0e0e0;
+        }
+        body {
+            background-color: var(--secondary);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        。container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+        header h1 {
+            color: var(--primary);
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            color: var(--light-text);
+            font-size: 1.1rem;
+        }
+        .tag-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.8rem;
+            margin: 1.5rem 0;
+        }
+        .tag {
+            background-color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+        section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.8rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        section h2 {
+            color: var(--primary);
+            margin-bottom: 1.2rem;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        section h2 i {
+            font-size: 1.2rem;
+        }
+        .feature-list {
+            list-style: none;
+        }
+        .feature-list li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        。feature-list li::before {
+            content: "✓";
+            color: var(--primary);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        。platform-link {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        .platform-btn {
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.3s;
+        }
+        .platform-btn:hover {
+            background-color: #3367d6;
+        }
+        。code-block {
+            background-color: var(--secondary);
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 1rem 0;
+            font-family: 'Consolas', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+        }
+        footer {
+            text-align: center;
+            color: var(--light-text);
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Jiangzhi Question Site</h1>
+            <p>适配优学院 & 学习通的编程刷题资源平台</p>
+            <div class="tag-group">
+                <span class="tag">Python 刷题</span>
+                <span class="tag">优学院同步</span>
+                <span class="tag">学习通配套</span>
+                <span class="tag">开源协作</span>
+            </div>
+        </header>
 
+        <section>
+            <h2>📚 项目介绍</h2>
+            <p>本平台基于 <strong>降值学习库</strong> 打造，专为优学院、学习通用户提供编程刷题资源。聚焦 Python 语法、算法与数据结构、计算机学科核心考点，题目分类清晰，配套详细题解，助力学习者对接课程要求，高效提升编程能力。</p>
+        </section>
+
+        <section>
+            <h2>✨ 核心特色</h2>
+            <ul class="feature-list">
+                <li><strong>双平台适配</strong>：题目覆盖优学院、学习通常见编程作业与考试题型，无缝对接课程学习</li>
+                <li><strong>分层题库设计</strong>：基础入门/进阶提升/真题演练三级分类，满足不同阶段学习需求</li>
+                <li><strong>思路导向题解</strong>：每道题提供多解法代码+逻辑分析+复杂度标注，拒绝机械刷题</li>
+                <li><strong>轻量化无依赖</strong>：克隆仓库即可本地使用，支持 Windows/macOS/Linux 全平台</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>🔗 平台对接</h2>
+            <p>可将题库内容与优学院、学习通课程绑定，实现：</p>
+            <ul class="feature-list">
+                <li>同步课程知识点，针对性刷题巩固</li>
+                <li>导出题目及答案，辅助完成平台作业</li>
+                <li>上传优质题解，参与课程资源共建</li>
+            </ul>
+            <div class="platform-link">
+                <a href="#" class="platform-btn">优学院资源入口</a>
+                <a href="#" class="platform-btn">学习通配套题库</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>🛠️ 快速使用</h2>
+            <p>1. 克隆仓库到本地</p>
+            <div class="code-block">
+git clone https://github.com/your-username/jiangzhi-question-site.git<br>
+cd jiangzhi-question-site
+            </div>
+            <p>2. 进入 <code>questions</code> 文件夹，选择对应模块刷题</p>
+            <p>3. 参考 <code>solutions</code> 文件夹的题解，优化解题思路</p>
+        </section>
+
+        <footer>
+            <p>© 2025 Jiangzhi Question Site | 开源刷题，助力双平台课程学习</p>
+        </footer>
+    </div>
+</body>
+</html>
